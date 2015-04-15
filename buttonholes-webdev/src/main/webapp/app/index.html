@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="suitApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="suitApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="suitApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Suit Admin - App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <!-- endbuild -->
+  
+</head>
+<body ng-app="suitApp">
+  <div class="container-fluid">
+    <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <li class="active"><a href="#">home</a></li>    
+        <li><a href="#/users">users</a></li>
+        <li><a href="#/order">order</a></li>
+        <li><a href="#/login">login</a></li>
+        <li><a href="#/parts/involucro">parts</a></li>
+      </ul>
+      <h3 class="text-muted">Suit Admin</h3>
+    </div>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+    <div ng-view></div>
+
+     <div class="footer">
+       <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+     </div>
+  </div>
+
+
+  <div>Angular seed app: v<span app-version></span></div>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+
+<!-- build:js(./)  scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-loader/angular-loader.js"></script>
+    <script src="bower_components/angular-underscore-module/angular-underscore-module.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="bower_components/message-center/message-center.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+  
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="directives/directives.js"></script>  
+  <script src="scripts/home/controllers/home.js"></script>
+  <script src="scripts/home/controllers/homeCtrl.js"></script>
+  <script src="scripts/message/services/custom-messageService.js"></script>
+  <script src="scripts/auth/controllers/login.js"></script>
+  <script src="scripts/auth/controllers/loginCtrl.js"></script>
+  <script src="scripts/users/controllers/users.js"></script>
+  <script src="scripts/users/controllers/userListCtrl.js"></script>
+  <script src="scripts/users/controllers/userDetailCtrl.js"></script>
+  <script src="scripts/users/controllers/userNewCtrl.js"></script>
+  <script src="scripts/users/services/userService.js"></script>
+  <script src="scripts/order/controllers/order.js"></script>
+  <script src="scripts/order/controllers/orderCtrl.js"></script>
+  <script src="scripts/parts/controllers/parts.js"></script>
+  <script src="scripts/parts/controllers/involucroCtrl.js"></script>
+  <script src="scripts/parts/controllers/componentesCtrl.js"></script>
+  <script src="scripts/parts/controllers/tipo-involucroCtrl.js"></script> 
+  <script src="scripts/parts/controllers/tampa-involucroCtrl.js"></script>
+  <script src="scripts/parts/controllers/tipo-componenteCtrl.js"></script>
+  <script src="scripts/parts/controllers/contatos-componenteCtrl.js"></script>
+  <script src="scripts/parts/controllers/tensao-resistenciaCtrl.js"></script>   
+  <script src="scripts/parts/controllers/cor-componenteCtrl.js"></script>
+  <script src="scripts/parts/controllers/especialCtrl.js"></script>
+  <script src="scripts/parts/controllers/confirmCtrl.js"></script>
+  <script src="scripts/parts/services/partsService.js"></script>
+  <script src="scripts/parts/services/componentesService.js"></script>
+  <script src="scripts/parts/services/tipo-involucroService.js"></script>
+  <script src="scripts/parts/services/tampa-involucroService.js"></script>
+  <script src="scripts/parts/services/tipo-componenteService.js"></script>
+  <script src="scripts/parts/services/contatos-componenteService.js"></script>
+  <script src="scripts/parts/services/tensao-resistenciaService.js"></script>
+  <script src="scripts/parts/services/cor-componenteService.js"></script>
+  <script src="scripts/parts/services/especialService.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

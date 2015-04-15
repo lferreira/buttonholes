@@ -1,0 +1,27 @@
+<div class="forgot-container" ng-controller="LoginCtrl as ctrl">
+	<div class="alert alert-danger" 
+		ng-bind="ctrl.errorMessage"
+		ng-show="ctrl.errorMessage"></div>
+	<div class="card forgot-card">
+		<div class="forgot-form">
+			<form name="forgotForm" 
+				ng-submit="ctrl.forgot()"
+				class="form-horizontal"
+				role="form">
+				<div class="form-group">
+					<label for="email">E-mail</label>
+					<input type="email" 
+							ng-model="ctrl.user.username"
+							class="form-control"
+							id="email"
+							placeholder="Username"
+							required>
+				</div>
+				<input type="submit"
+						class="btn btn-success btn-fgt"
+						value="Ok"
+						ng-disabled="forgotForm.$invalid">	
+			</form>
+		</div>
+	</div>
+</div>

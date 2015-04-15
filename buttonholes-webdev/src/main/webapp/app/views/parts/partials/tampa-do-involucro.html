@@ -1,0 +1,11 @@
+<div ng-controller="TampaInvolucroCtrl as ctrl">
+  <div>Tampa do Invólucro(2)</div>
+  <div class="radio" ng-repeat="item in ctrl.items track by item.id">
+    <label>
+      <input type="radio" ng-value="item"
+        ng-model="ctrl.selectedItem" name="tampaInvolucroGroup" 
+        ng-click="ctrl.setItem()">{{item.description}}
+      </label>
+  </div>
+  </div>
+</div>

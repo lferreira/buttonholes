@@ -1,0 +1,27 @@
+<h1>Edit</h1>
+<div class="add-container" ng-controller="UserDetailCtrl as ctrl">
+	<div class="alert alert-danger" 
+		ng-bind="ctrl.errorMessage"
+		ng-show="ctrl.errorMessage"></div>
+	<div class="card new-user-card">
+		<div class="edit-form">
+			<form name="editForm" 
+				ng-submit="ctrl.update()"
+				class="form-horizontal"
+				role="form">
+				<div class="form-group">
+					<input type="text" 
+							ng-model="ctrl.user.email"
+							class="form-control"
+							id="email"
+							placeholder="E-mail"
+							required>
+					<input type="submit"
+						class="btn btn-success btn-lg"
+						value="Update"
+						ng-disabled="editForm.$invalid">
+				</div>			
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+<div ng-controller="UserListCtrl as ctrl">
+	<table class="table table-striped table-bordered table-hover table-condensed">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr data-ng-repeat="user in ctrl.users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                 <td>{{user.email}}</td>
+                <td class="col-md-1"><a ng-click="ctrl.edit(user.id)" class="btn btn-info">edit</a></td>
+                <td class="col-md-1"><a confirmed-click="ctrl.delete(user.id)" class="btn btn-danger"
+    	  ng-confirm-click="Would you like to remove {{user.name}} ?">delete</a></td>
+            </tr>
+        </table>
+	<a href="#/users/new">new</a>	
+</div>

@@ -1,0 +1,15 @@
+<div ng-include="'views/parts/partials/components.html'" ng-controller="ComponentesCtrl"></div>
+<div class="row" ng-controller="TensaoResistenciaCtrl as ctrl">
+  <div>Tensão / Resistência(5)</div>
+  <div class="radio" ng-repeat="item in ctrl.items track by item.id">
+    <label>
+      <input type="radio" ng-value="item"
+        ng-model="ctrl.selectedItem" name="itemGroup" 
+        ng-click="ctrl.setItem()">{{item.description}}
+      </label>
+  </div>
+  <div>
+    <a href="#/parts/contatos-do-componente"> << Contatos do Componente</a>
+    <a href="#/parts/cor-do-componente">Cor do Componente >> </a>
+  </div>
+</div>

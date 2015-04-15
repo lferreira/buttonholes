@@ -1,0 +1,55 @@
+<h1>New User</h1>
+<div class="add-container" ng-controller="UserNewCtrl as ctrl">
+	<div class="alert alert-danger" 
+		ng-bind="ctrl.errorMessage"
+		ng-show="ctrl.errorMessage"></div>
+	<div class="card new-user-card">
+		<div class="add-form">
+			<form name="addForm" 
+				ng-submit="ctrl.add()"
+				class="form-horizontal"
+				role="form">
+				<fieldset>
+					<div class="form-group">
+						<div class="col-sm-5">
+						<input type="email" 
+								ng-model="ctrl.user.email"
+								class="form-control"
+								id="email"
+								placeholder="E-mail"
+								required>
+						</div>		
+					</div>
+					<div class="form-group">
+						<div class="col-sm-5">
+	    				<input type="password"
+	    						class="form-control" 
+	    						ng-model="ctrl.user.password" 
+	    						placeholder="Password">
+	    				</div>		
+	    			</div>
+	    			<div class="form-group">
+	    				<div class="col-sm-5">			
+	    				<input type="password"
+	    						class="form-control" 
+	    						ng-model="ctrl.user.verify" 
+	    						nx-equal="ctrl.user.password" 
+	    						name="verify"
+	    						placeholder="Confirm Password">
+	    				</div>			
+	    				<span ng-show="addForm.verify.$error.nxEqual">Must be equal!</span>
+	    					
+	    			</div>			
+					<div class="form-group">
+						<div class="col-sm-5">	
+						<input type="submit"
+							class="btn btn-success btn-lg"
+							value="Add"
+							ng-disabled="addForm.$invalid">
+						</div>		
+					</div>
+				</fieldset>		
+			</form>
+		</div>
+	</div>
+</div>

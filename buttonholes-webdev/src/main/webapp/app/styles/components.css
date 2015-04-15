@@ -1,0 +1,86 @@
+.main-wrapper {
+	margin-top: 30px;
+}
+.box-wrap {
+	width: 84px;
+	display: block;
+	float: left;
+	padding: 10px;
+	margin: 0px 2px;
+}
+
+.box-wrap.component {
+	width: 148px;
+	border-radius: 6px;
+}
+
+.box {
+	float: left;
+	display: block;
+	width: 30px;
+	height: 33px;
+	/*background-color: #f2f2f2;*/
+	border: 2px solid;
+	margin: 1px;
+	text-align: center;
+}
+
+.box.especial {
+	width: 42px;
+	border: 0px;
+}
+
+.box.inactive {
+	pointer-events: none;
+	opacity: 0.2;
+	/*background: #CCC;*/
+}
+
+.box-wrap.active .box {
+	background-color: #fff;
+}
+
+.box-wrap.especial {
+	margin: 0px -24px;
+}
+
+span.txt {
+	/*color: #000;*/
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.label-box {
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin: 5px 0px 10px 0px;
+}
+
+.label.especial .box {
+	background-color: #44AD9C;
+}
+
+.active {
+	background-color: #eee;
+}
+
+.box.red {
+	color: #ff0000;
+}
+.box.cyan {
+	color: #57A5F2;
+}
+.box.orange {
+	color: orange;
+}
+.box.purple {
+	color: purple;
+}
+.box.green {
+	color: green;
+}
+.box.brown {
+	color: brown;
+}

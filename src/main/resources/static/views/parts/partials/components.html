@@ -1,0 +1,67 @@
+<div class="row main-wrapper" ng-controller="ComponentesCtrl as ctrl">
+	<div ng-class="{'active': ctrl.activeItem.value == 're'}" class="box-wrap">
+		<label class="label-box">&nbsp;</label>
+		<div ng-class="{'inactive': ctrl.isrr.tipoInvolucro.id === undefined}" class="box red">
+			<span class="txt">{{ctrl.isrr.tipoInvolucro.id}}</span>
+		</div>
+		<div ng-class="{'inactive': ctrl.isrr.tampaInvolucro.id === undefined}" class="box cyan">
+			<span class="txt">{{ctrl.isrr.tampaInvolucro.id}}</span>
+		</div>
+	</div>
+
+	<div ng-class="{'active': ctrl.activeItem.value == 'one'}" class="box-wrap component">
+		<label class="label-box">Componente 1</label>
+		<div ng-class="{'inactive': ctrl.isrr.componente1.tipoComponente.id === undefined}" class="box orange">
+			<span class="txt">{{ctrl.isrr.componente1.tipoComponente.id}}</span>
+		</div>
+		<div ng-class="{'inactive': ctrl.isrr.componente1.contatosComponente.id === undefined}" class="box purple">
+			<span class="txt">{{ctrl.isrr.componente1.contatosComponente.id}}</span>
+		</div>
+		<div ng-class="{'inactive': ctrl.isrr.componente1.tensaoResistencia.id === undefined}" class="box green">
+			<span class="txt">{{ctrl.isrr.componente1.tensaoResistencia.id}}</span>
+		</div>
+		<div ng-class="{'inactive': ctrl.isrr.componente1.cor.id === undefined}" class="box brown">
+			<span class="txt">{{ctrl.isrr.componente1.cor.id}}</span>
+		</div>
+	</div>
+
+	<div ng-class="{'active': ctrl.activeItem.value == 'two'}" class="box-wrap component">
+		<label class="label-box">Componente 2</label>
+		<div ng-class="{'inactive': ctrl.isrr.componente2.tipoComponente.id === undefined}" class="box orange">
+			<span class="txt">{{ctrl.isrr.componente2.tipoComponente.id}}</span>
+		</div>
+		<div ng-class="{'inactive': ctrl.isrr.componente2.contatosComponente.id === undefined}" class="box purple">
+			<span class="txt">{{ctrl.isrr.componente2.contatosComponente.id}}</span>
+		</div>
+		<div ng-class="{'inactive': ctrl.isrr.componente2.tensaoResistencia.id === undefined}" class="box green">
+			<span class="txt">{{ctrl.isrr.componente2.tensaoResistencia.id}}</span>
+		</div>
+		<div ng-class="{'inactive': ctrl.isrr.componente2.cor.id === undefined}" class="box brown">
+			<span class="txt">{{ctrl.isrr.componente2.cor.id}}</span>
+		</div>
+	</div>
+
+	<div ng-class="{'active': ctrl.activeItem.value == 'three'}" class="box-wrap component">
+		<label class="label-box">Componente 3</label>
+		<div ng-class="{'inactive': ctrl.isrr.componente3.tipoComponente.id === undefined}" class="box orange">
+			<span class="txt">{{ctrl.isrr.componente3.tipoComponente.id}}</span>
+		</div>
+		<div ng-class="{'inactive': ctrl.isrr.componente3.contatosComponente.id === undefined}" class="box purple">
+			<span class="txt">{{ctrl.isrr.componente3.contatosComponente.id}}</span>
+		</div>
+		<div ng-class="{'inactive': ctrl.isrr.componente3.tensaoResistencia.id === undefined}" class="box green">
+			<span class="txt">{{ctrl.isrr.componente3.tensaoResistencia.id}}</span>
+		</div>
+		<div ng-class="{'inactive': ctrl.isrr.componente3.cor.id === undefined}" class="box brown">
+			<span class="txt">{{ctrl.isrr.componente3.cor.id}}</span>
+		</div>
+	</div>
+
+	<div ng-class="{'active': ctrl.activeItem.value == 'especial'}" class="box-wrap especial">
+	<label class="label-box">&nbsp;</label>	
+		<div ng-class="{'inactive': !ctrl.isrr.especial}" class="box especial">
+			<span ng-show="ctrl.isrr.especial" class="txt">OO</span>
+		</div>
+	</div>
+
+</div>

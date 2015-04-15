@@ -1,0 +1,10 @@
+<div ng-controller="TipoInvolucroCtrl as ctrl">
+  <div>Tipo do Invólucro(1)</div>
+  <div class="radio" ng-repeat="item in ctrl.items track by item.id">
+    <label>
+      <input type="radio" ng-value="item"
+        ng-model="ctrl.selectedItem" name="tipoInvolucroGroup" 
+        ng-click="ctrl.setItem()">{{item.id}} - {{item.description}}
+      </label>
+  </div>
+</div>
