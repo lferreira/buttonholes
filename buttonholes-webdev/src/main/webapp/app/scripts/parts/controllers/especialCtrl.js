@@ -9,7 +9,7 @@ angular.module('suitApp.parts')
   self.selectedItem = {};
 
   self.view = function() {
-    $location.path('/parts/confirm');
+    $location.path('#/parts/confirm');
   };
 
   self.setItem = function() {

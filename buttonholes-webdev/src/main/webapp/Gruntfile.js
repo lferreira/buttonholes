@@ -1,6 +1,10 @@
 // Generated on 2015-04-12 using generator-angular 0.10.0
 'use strict';
 
+var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
+
+var proxySnippet = require('grunt-connect-proxy/lib/utils').proxyRequest;
+
 // # Globbing
 // for performance reasons we're only matching one level down:
 // 'test/spec/{,*/}*.js'
@@ -81,11 +85,20 @@ module.exports = function (grunt) {
         hostname: 'localhost',
         livereload: 35729
       },
+      proxies: [
+                {
+                    context: '/api',
+                    host: 'localhost',
+                    port: 8080
+                }
+      ],
       livereload: {
         options: {
-          open: true,
+          open: false,
           middleware: function (connect) {
             return [
+              proxySnippet,
+              lrSnippet,
               connect.static('.tmp'),
               connect().use(
                 '/bower_components',
@@ -376,13 +389,14 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'wiredep',
+      'configureProxies',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
       'watch'
     ]);
   });
-
+  
   grunt.registerTask('server', 'DEPRECATED TASK. Use the "serve" task instead', function (target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve:' + target]);

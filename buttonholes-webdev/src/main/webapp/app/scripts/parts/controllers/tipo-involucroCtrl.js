@@ -7,7 +7,7 @@ angular.module('suitApp.parts')
   var self = this;
 
   self.items = TipoInvolucroService.list();
-
+  
   self.selectedItem = {};
 
   self.setItem = function() {
@@ -15,6 +15,7 @@ angular.module('suitApp.parts')
     $rootScope.$broadcast('update', 'message');
   }
 
-  self.selectedItem = Object.keys(TipoInvolucroService.get()).length === 0 ? null : _.find(self.items, TipoInvolucroService.get());
+  self.selectedItem = Object.keys(TipoInvolucroService.get()).length === 0 ? null : 
+	  _.find(self.items, TipoInvolucroService.get());
 
 }]);

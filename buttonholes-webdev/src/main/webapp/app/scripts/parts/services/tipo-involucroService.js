@@ -2,7 +2,7 @@
 
 angular.module('suitApp.parts')
 
-.factory('TipoInvolucroService', [function(){
+.factory('TipoInvolucroService', ['$resource', function($resource){
   var self = this;
 
     self.tipoInvolucros = [
